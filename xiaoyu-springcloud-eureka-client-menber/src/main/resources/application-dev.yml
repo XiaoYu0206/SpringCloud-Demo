@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  redis:
+    password: 123456
+    host: localhost
+  application:
+    name: xiaoyu-eureka-member-client-member
+eureka:
+  client:
+    service-url:
+      ##当前会员服务注册到eureka服务地址
+      defaultZone: http://localhost:8080/eureka,http://localhost:8084/eureka
+      ##需要将服务注册到注册中心
+    register-with-eureka: true
+    ##需要检索服务
+    fetch-registry: true

@@ -18,3 +18,8 @@ eureka:
     register-with-eureka: true
     ##是否需要检索服务信息
     fetch-registry: true
+  server:
+    ##本地环境禁用自我保护机制
+    enable-self-preservation: false
+    ##超过2000ms未检测到心跳包就将服务剔除
+    eviction-interval-timer-in-ms: 2000
